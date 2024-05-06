@@ -13,7 +13,7 @@ export const unpkgPathPlugin = () => {
       build.onResolve({ filter: /^\.+\// }, async (args: any) => {
         const href = new URL(
           args.path,
-          'https://unpkg.com/' + args.resolveDir + '/',
+          'https://unpkg.com' + args.resolveDir + '/',
         ).href
 
         return {
